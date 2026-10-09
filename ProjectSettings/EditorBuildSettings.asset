@@ -15,12 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/GameSceneSmall.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/GameSceneMedium.unity
-    guid: 91595a2cbbb8e4847bc6102bd8f0faf2
-  - enabled: 1
-    path: Assets/Scenes/GameSceneLarge.unity
-    guid: 6e1d5d28c7aea6c4d9701694e9aee0e3
-  - enabled: 1
     path: Assets/Scenes/VictoryScene.unity
     guid: f6d2e811ee6980747889def0251a72db
   m_configObjects:
