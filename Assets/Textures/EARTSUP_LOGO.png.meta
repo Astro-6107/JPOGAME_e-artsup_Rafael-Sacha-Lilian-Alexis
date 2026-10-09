@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: ee789cce8dc43094893ebe2c41514f21
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8628147781766438151
+    second: E-ARTSUP_LOGO_0
+  - first:
+      213: -8127489448562071869
+    second: E-ARTSUP_LOGO_1
+  - first:
+      213: 5692772872254344347
+    second: E-ARTSUP_LOGO_2
+  - first:
+      213: 5909234641140138516
+    second: E-ARTSUP_LOGO_3
+  - first:
+      213: 3889473153005623905
+    second: E-ARTSUP_LOGO_4
+  - first:
+      213: 2052675999940998014
+    second: E-ARTSUP_LOGO_5
+  - first:
+      213: -3303792639895856888
+    second: E-ARTSUP_LOGO_6
+  - first:
+      213: 3485884469068026818
+    second: E-ARTSUP_LOGO_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: E-ARTSUP_LOGO_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 126
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70d53c191b65db770800000000000000
+      internalID: 8628147781766438151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: E-ARTSUP_LOGO_1
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 293
+        width: 181
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c6e8b6686b553f80800000000000000
+      internalID: -8127489448562071869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: E-ARTSUP_LOGO_2
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 126
+        width: 321
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9c43b504cac00f40800000000000000
+      internalID: 5692772872254344347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: E-ARTSUP_LOGO_3
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 134
+        width: 219
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 412479ff891d10250800000000000000
+      internalID: 5909234641140138516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: E-ARTSUP_LOGO_4
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 126
+        width: 253
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16a9150b93f2af530800000000000000
+      internalID: 3889473153005623905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: E-ARTSUP_LOGO_5
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 126
+        width: 285
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e73f37742f19c7c10800000000000000
+      internalID: 2052675999940998014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: E-ARTSUP_LOGO_6
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 126
+        width: 331
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 809157729129622d0800000000000000
+      internalID: -3303792639895856888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: E-ARTSUP_LOGO_7
+      rect:
+        serializedVersion: 2
+        x: 2274
+        y: 0
+        width: 385
+        height: 486
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c3d9d2a479506030800000000000000
+      internalID: 3485884469068026818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      E-ARTSUP_LOGO_0: 8628147781766438151
+      E-ARTSUP_LOGO_1: -8127489448562071869
+      E-ARTSUP_LOGO_2: 5692772872254344347
+      E-ARTSUP_LOGO_3: 5909234641140138516
+      E-ARTSUP_LOGO_4: 3889473153005623905
+      E-ARTSUP_LOGO_5: 2052675999940998014
+      E-ARTSUP_LOGO_6: -3303792639895856888
+      E-ARTSUP_LOGO_7: 3485884469068026818
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
