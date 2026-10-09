@@ -17,6 +17,9 @@ namespace JPO
 
         private void Start()
         {
+            // Hide cursor
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             image.SetAlpha(0f);
 
             _introSeq = DOTween.Sequence().SetEase(Ease.InOutQuad);
