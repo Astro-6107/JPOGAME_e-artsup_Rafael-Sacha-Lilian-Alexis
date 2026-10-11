@@ -93,9 +93,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2889afedb79b63640b4709d5f700759c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JPO.HealthItem
-  healthAmount: 1
-  sprite: {fileID: 3925265772259513027}
+  visualT: {fileID: 3925265772259513027}
+  visualAnimAmplitude: 0.15
+  visualAnimDuration: 0.5
   delayBeforeDestroy: 0.5
+  healthAmount: 1
 --- !u!82 &1500647319703917435
 AudioSource:
   m_ObjectHideFlags: 0

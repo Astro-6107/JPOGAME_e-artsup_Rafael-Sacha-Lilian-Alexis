@@ -184,7 +184,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc0e71c2c257a4642838fa67981fd0fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JPO.ExitKey
-  keySprite: {fileID: 3751478525613317489}
+  visualT: {fileID: 3751478525613317489}
+  visualAnimAmplitude: 0.15
+  visualAnimDuration: 0.5
   delayBeforeDestroy: 0.5
 --- !u!82 &3278504713720644883
 AudioSource:

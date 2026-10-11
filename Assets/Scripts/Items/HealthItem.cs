@@ -1,38 +1,29 @@
-using DG.Tweening;
 using UnityEngine;
 
 namespace JPO
 {
-    public class HealthItem : MonoBehaviour
+    public class HealthItem : Item
     {
+        [Header("Health Item Settings")]
         [SerializeField] private int healthAmount = 1;
-        [SerializeField] private Transform sprite;
-        [SerializeField] private float delayBeforeDestroy = 0.5f;
+        private HealthSystem _collidingHealth;
 
-        private AudioSource _source;
-        private Tween _tween;
-        private bool _isCollected;
-
-        private void Start()
+        protected override bool CanBeCollected(Collider2D collision)
         {
-            _source = GetComponent<AudioSource>();
-            _tween = sprite.DOLocalMoveY(0.15f, 0.5f)
-                .SetEase(Ease.InOutSine)
-                .SetLoops(-1, LoopType.Yoyo);
+            // Check if the item can be collected with the conditions from the base class
+            if (!base.CanBeCollected(collision)) return false;
+            // Check if the player colliding has the HealthSystem component on it and store it in the _collidingHealth variable
+            return collision.TryGetComponent(out _collidingHealth);
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        protected override void OnCollected(Collider2D collision)
         {
-            // Check if the item has already been collected, if the player is colliding and try to get its health
-            if (_isCollected) return;
-            if (!collision.CompareTag("Player")) return;
-            if (!collision.TryGetComponent(out HealthSystem playerHealth)) return;
-            _isCollected = true;
-            _tween?.Kill();
-            sprite.gameObject.SetActive(false);
-            playerHealth.AddHealth(healthAmount);
-            _source.Play();
-            Destroy(gameObject, delayBeforeDestroy);
+            // Perform the actions of the base class on this item (hide visual, play sound)
+            base.OnCollected(collision);
+            // Check if we successfuly get the health component during the last check
+            if (!_collidingHealth) return;
+            // Add health to colliding player
+            _collidingHealth.AddHealth(healthAmount);
         }
     }
 }
