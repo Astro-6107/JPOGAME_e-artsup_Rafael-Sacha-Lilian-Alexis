@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d970e3108976849894436a1b58a788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JPO.HealthSystem
-  startHealth: 3
+  startHealth: 1
   invulnerabilityTime: 1
   onDamageReceived:
     m_PersistentCalls:
