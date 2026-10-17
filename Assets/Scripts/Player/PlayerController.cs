@@ -54,6 +54,14 @@ namespace JPO
         }
 
         /// <summary>
+        /// Activate player inputs
+        /// </summary>
+        public void EnableInput()
+        {
+            _pInput.ActivateInput();
+        }
+
+        /// <summary>
         /// Setup listeners for player input
         /// </summary>
         private void SetupInputListeners()
