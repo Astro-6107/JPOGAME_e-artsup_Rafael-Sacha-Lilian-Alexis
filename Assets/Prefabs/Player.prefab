@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 6633701991672306637}
   - component: {fileID: 1959650340860544343}
   - component: {fileID: 1440957258520677628}
+  - component: {fileID: 7015879916328616823}
   - component: {fileID: 6078895576016482581}
   - component: {fileID: 8142577333129511035}
   - component: {fileID: 1167594531305446748}
@@ -371,6 +372,32 @@ MonoBehaviour:
   cooldownDuration: 0.5
   startAttackAngle: 90
   endAttackAngle: -90
+--- !u!114 &7015879916328616823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2176081245108314385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b9b1142d5608542b309757c1051ffd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JPO.Player
+  projectilePrefab: {fileID: 7017048779420652532, guid: 524648cdd18532a418ce40321a57b5ac, type: 3}
+  firePositionOffset: {x: 0, y: 0}
+  projectilePerWave: 1
+  waveCooldownDuration: 1
+  delayBetweenProjectile: 1
+  playerDetectionRadius: 5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  playerSprite: {fileID: 4715527703210162421}
+  damageBlinkFadeDuration: 0.1
+  damageBlinkInterval: 0.2
+  healthItemPrefab: {fileID: 4565873510262096032, guid: 8d2b6719d46c46647b2ec51dcf19ab2d, type: 3}
+  itemDropChance: 0.0011999999
 --- !u!114 &6078895576016482581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5458,7 +5485,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -274155867
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_RenderMode: 0
@@ -5570,7 +5597,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 526106061
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Time: 0.3
@@ -5754,7 +5781,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -274155867
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: e321a59ed7ddd9a46ac4156180c1257c, type: 3}
@@ -10627,7 +10654,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -274155867
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_RenderMode: 0
@@ -10742,7 +10769,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 526106061
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 967dd54094435f345a3ef03ad763dd51, type: 3}
