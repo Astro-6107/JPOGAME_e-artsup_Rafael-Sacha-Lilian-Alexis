@@ -49,8 +49,8 @@ namespace JPO
             if (!obj) return false;
             // Check if we are not ignoring this object
             if (objectsToIgnore.Contains(obj)) return false;
-            // Check if we are not ignoring the tag
-            if (tagsToIgnore.Contains(obj.tag)) return false;
+              //// Check if we are not ignoring the tag
+              //if (tagsToIgnore.Contains(obj.tag)) return false;
             // Else we can damage the object
             return true;
         }
