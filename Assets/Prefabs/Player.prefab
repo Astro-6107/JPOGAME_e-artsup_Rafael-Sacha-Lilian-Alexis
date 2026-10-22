@@ -215,7 +215,6 @@ GameObject:
   - component: {fileID: 5249670088426011010}
   - component: {fileID: 6633701991672306637}
   - component: {fileID: 1959650340860544343}
-  - component: {fileID: 1440957258520677628}
   - component: {fileID: 7015879916328616823}
   - component: {fileID: 6078895576016482581}
   - component: {fileID: 8142577333129511035}
@@ -223,6 +222,7 @@ GameObject:
   - component: {fileID: 3468075313066839224}
   - component: {fileID: 1745026856696125839}
   - component: {fileID: 6498980301309466946}
+  - component: {fileID: 5744763133683337340}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -354,24 +354,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1440957258520677628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2176081245108314385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66505433f30cbd4cadaf319992d8074, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::JPO.PlayerAttack
-  swordPivot: {fileID: 3636498110383423701}
-  swordTrail: {fileID: 9089519606619619172}
-  attackDuration: 0.25
-  cooldownDuration: 0.5
-  startAttackAngle: 90
-  endAttackAngle: -90
 --- !u!114 &7015879916328616823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,6 +411,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JPO.PlayerController
   onMove:
+    m_PersistentCalls:
+      m_Calls: []
+  onAimButtonPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onAimButtonRealeased:
+    m_PersistentCalls:
+      m_Calls: []
+  onAimDirectionChanged:
     m_PersistentCalls:
       m_Calls: []
   onAttack:
@@ -521,6 +512,21 @@ MonoBehaviour:
   playerSprite: {fileID: 4715527703210162421}
   scaleDuration: 0.5
   scaleEasing: 26
+--- !u!114 &5744763133683337340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2176081245108314385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae9f8ed48ce5704684e1de4392349ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JPO.PlayerShoot
+  gunPivot: {fileID: 7612742539487032720}
+  trail: {fileID: 9089519606619619172}
+  aimSmoothFactor: 10
 --- !u!1 &2841172813049367261
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,7 +671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7612742539487032720
 Transform:
   m_ObjectHideFlags: 0
