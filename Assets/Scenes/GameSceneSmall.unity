@@ -868,11 +868,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7950390457423255498, guid: a1fadcc00eb3b1c408683fde28bb5aa1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.22
+      value: -3.24
       objectReference: {fileID: 0}
     - target: {fileID: 7950390457423255498, guid: a1fadcc00eb3b1c408683fde28bb5aa1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.18
+      value: -2.72
       objectReference: {fileID: 0}
     - target: {fileID: 7950390457423255498, guid: a1fadcc00eb3b1c408683fde28bb5aa1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7951,7 +7951,7 @@ PrefabInstance:
       objectReference: {fileID: 766765373}
     - target: {fileID: -1684288197407049838, guid: e153f9885f4e07648944afe9b4d0a5e9, type: 3}
       propertyPath: weaponIndex
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 407441814069067170, guid: e153f9885f4e07648944afe9b4d0a5e9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8096,7 +8096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2702290767106214176, guid: 9ff47eaf1229733499b38b0eef408cdb, type: 3}
       propertyPath: speed
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2702290767106214176, guid: 9ff47eaf1229733499b38b0eef408cdb, type: 3}
       propertyPath: enemyPath.Array.size
@@ -8116,6 +8116,10 @@ PrefabInstance:
       objectReference: {fileID: 2032616812}
     - target: {fileID: 2702290767106214176, guid: 9ff47eaf1229733499b38b0eef408cdb, type: 3}
       propertyPath: 'enemyPath.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1854586780}
+    - target: {fileID: 2702290767106214176, guid: 9ff47eaf1229733499b38b0eef408cdb, type: 3}
+      propertyPath: 'enemyPath.Array.data[4]'
       value: 
       objectReference: {fileID: 1854586780}
     - target: {fileID: 2969717354975156906, guid: 9ff47eaf1229733499b38b0eef408cdb, type: 3}
@@ -8157,6 +8161,18 @@ PrefabInstance:
     - target: {fileID: 2969717354975156906, guid: 9ff47eaf1229733499b38b0eef408cdb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8743850395568681003, guid: 9ff47eaf1229733499b38b0eef408cdb, type: 3}
+      propertyPath: movementFrequency
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8743850395568681003, guid: 9ff47eaf1229733499b38b0eef408cdb, type: 3}
+      propertyPath: movementScaleAmplitude
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8743850395568681003, guid: 9ff47eaf1229733499b38b0eef408cdb, type: 3}
+      propertyPath: movementRotationAmplitude
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

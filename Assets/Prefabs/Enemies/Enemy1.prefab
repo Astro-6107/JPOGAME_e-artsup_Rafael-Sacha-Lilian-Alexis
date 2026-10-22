@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1906398074831595683}
   - component: {fileID: 2148107060424152414}
   - component: {fileID: 2702290767106214176}
+  - component: {fileID: 8743850395568681003}
   m_Layer: 7
   m_Name: Enemy1
   m_TagString: Enemy
@@ -258,7 +259,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1c4f15cbff2c84abb04d013b3e6c01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  wpDistanceThreshold: 0.1
+  speed: 1
   enemyPath: []
+  onStartMoving:
+    m_PersistentCalls:
+      m_Calls: []
+  onStopMoving:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8743850395568681003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400072156035352037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc4fd42b70fd317408e9b7913b7ecddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JPO.EnemyVisuals
+  enemySprite: {fileID: 6748013664906145072}
+  movementRotationAmplitude: 10
+  movementScaleAmplitude: 0
+  movementFrequency: 20
 --- !u!1 &6971116283299591726
 GameObject:
   m_ObjectHideFlags: 0
