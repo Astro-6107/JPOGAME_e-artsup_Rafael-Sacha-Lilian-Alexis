@@ -1,5 +1,7 @@
 using System.IO;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.UIElements;
 
 
 namespace JPO
@@ -7,54 +9,60 @@ namespace JPO
     public class EnemyMovement : MonoBehaviour
     {
         [SerializeField] private EnemyWaypoint[] enemyPath;
+
+        int currentWaypoint = 0;
+
+        bool isMovingForward = true;
         [SerializeField] private float wpDistanceThreshold = 0.1f;
 
-        [SerializeField] private SpriteRenderer enemySprite;
-
-        private Transform target;
-        [SerializeField]private float speed = 1.0f;
+        private EnemyWaypoint target;
+        [SerializeField]private int speed = 1;
         private EnemyWaypoint wp;
+
+        
 
         void Start()
         {
-            if (enemyPath.Length > 0)
-                print(enemyPath.Length);
-            else
+            if (enemyPath.Length <= 0)
                 print("path is empty");
 
-            target = enemyPath[0].transform;
-
+            // on initialise le premier waypoint ainsi que la cible
+            currentWaypoint = 0;
+            target = enemyPath[currentWaypoint];
 
             if (target == null)
             {
                 print("aucune target n'est assignée");
-
             }
 
-            else
-            {
-                print(Vector3.Distance(target.position, target.position));
-            }
         }
             
-
         void Update()
         {
+            //La fonction Update appelle sans arrêt la fonction TrackPath, cela permet de ne pas surcharger la fonction Update.
             TrackPath();  
         }
 
+
+        // La fonction TrackPath permet de gérer les déplacements de l'ennemi selon un chemin prédéfini avec des Waypoints.
         void TrackPath()
         {
-
             if (target != null)
             {
-                transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+                if (Vector3.Distance(transform.position, target.transform.position) <= wpDistanceThreshold)
+                {
+                    // On passe au waypoint suivant
+                    currentWaypoint += 1;
+                }
+                if (currentWaypoint >= enemyPath.Length)
+                {
+                    // Quand on atteint le waypoint max, on revient au début 
+                    currentWaypoint = 0;
+                }
 
+                target = enemyPath[currentWaypoint];
             }
-            /*wpPosition = wp.transform.position;
-            enemySprite.flipX = wpPosition.x < transform.position.x;
-            transform.position = directionToWp * wp.transform.position;*/
-
         }  
 
     }
