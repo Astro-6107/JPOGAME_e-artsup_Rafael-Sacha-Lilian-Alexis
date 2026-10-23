@@ -44,21 +44,12 @@ namespace JPO
                 var newScale = 1f + verticalModifier;
                 enemySprite.transform.localScale = new Vector3(1f, newScale, 1f);
 
-                // Handle move particles
-                /*if (!moveParticles.isPlaying) moveParticles.Play();
-                var shape = moveParticles.shape;
-                var arc = shape.arc;
-                shape.rotation = new Vector3(0f, 0f, _movement.FacingDirection == FacingDirection.Right
-                    ? 180f - arc * 0.5f
-                    : -arc * 0.5f
-                );*/
             }
             else
             {
                 _movementTimer = 0f;
                 enemySprite.transform.localRotation = Quaternion.identity;
                 enemySprite.transform.localScale = Vector3.one;
-                //if (moveParticles.isPlaying) moveParticles.Stop();
             }
 
 
