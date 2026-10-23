@@ -366,7 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b9b1142d5608542b309757c1051ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JPO.Player
-  projectilePrefab: {fileID: 7017048779420652532, guid: 524648cdd18532a418ce40321a57b5ac, type: 3}
+  projectilePrefab: {fileID: 774447363827149198, guid: 68efad0c82c054644864d6657c765bd0, type: 3}
   firePositionOffset: {x: 0, y: 0}
   projectilePerWave: 1
   waveCooldownDuration: 1
@@ -413,12 +413,6 @@ MonoBehaviour:
   onMove:
     m_PersistentCalls:
       m_Calls: []
-  onAimButtonPressed:
-    m_PersistentCalls:
-      m_Calls: []
-  onAimButtonRealeased:
-    m_PersistentCalls:
-      m_Calls: []
   onAimDirectionChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -462,7 +456,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JPO.PlayerVisual
   playerSprite: {fileID: 4715527703210162421}
-  sword: {fileID: 2818503059608308420}
   moveParticles: {fileID: 5956638231915121347}
   movementRotationAmplitude: 7
   movementScaleAmplitude: 0.1
@@ -525,9 +518,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JPO.PlayerShoot
   gunPivot: {fileID: 7612742539487032720}
-  trail: {fileID: 9089519606619619172}
-  aimSmoothFactor: 10
   _gunSprite: {fileID: 6791468627562637550}
+  aimSmoothFactor: 10
+  projectilePrefab: {fileID: 774447363827149198, guid: 68efad0c82c054644864d6657c765bd0, type: 3}
+  trail: {fileID: 9089519606619619172}
+  firePoint: {fileID: 4774715269691565404}
+  shotsDelay: 0.2
 --- !u!1 &2841172813049367261
 GameObject:
   m_ObjectHideFlags: 0
@@ -10709,7 +10705,7 @@ GameObject:
   - component: {fileID: 2818503059608308420}
   - component: {fileID: 3049062449159454950}
   m_Layer: 0
-  m_Name: Sword Sprite
+  m_Name: Gun Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10727,7 +10723,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4774715269691565404}
   m_Father: {fileID: 7612742539487032720}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &6791468627562637550
@@ -10796,7 +10793,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8764362424758611193}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -11083,3 +11080,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &9180840061946656041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4774715269691565404}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4774715269691565404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9180840061946656041}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.861, y: 0.195, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6111347608066419961}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

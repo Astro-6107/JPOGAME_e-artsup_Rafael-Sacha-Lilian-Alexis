@@ -8,8 +8,6 @@ namespace JPO
     {
         [Header("Input Events"), Space]
         public UnityEvent<Vector2> onMove;
-        public UnityEvent onAimButtonPressed;
-        public UnityEvent onAimButtonRealeased;
         public UnityEvent<Vector2> onAimDirectionChanged;
         public UnityEvent onAttack;
         public UnityEvent onStopAttack;
@@ -75,11 +73,10 @@ namespace JPO
             _pInput.actions.FindAction("Player/Move").canceled += OnMoveCanceled;
 
             _pInput.actions.FindAction("Player/AimDirection").performed += OnAimDirectionPerformed;
-            _pInput.actions.FindAction("Player/AimDirection").canceled += OnAimDirectionCanceled;
-
 
             _pInput.actions.FindAction("Player/Attack").performed += OnAttackPerformed;
             _pInput.actions.FindAction("Player/Attack").canceled += OnAttackCanceled;
+
             _pInput.actions.FindAction("Player/Pause").performed += OnPausePerformed;
         }
 
@@ -91,6 +88,7 @@ namespace JPO
             if (!_pInput) return;
             _pInput.actions.FindAction("Player/Move").performed -= OnMovePerformed;
             _pInput.actions.FindAction("Player/Move").canceled -= OnMoveCanceled;
+            _pInput.actions.FindAction("Player/AimDirection").performed -= OnAimDirectionPerformed;
             _pInput.actions.FindAction("Player/Attack").performed -= OnAttackPerformed;
             _pInput.actions.FindAction("Player/Attack").canceled -= OnAttackCanceled;
             _pInput.actions.FindAction("Player/Pause").performed -= OnPausePerformed;
@@ -116,12 +114,6 @@ namespace JPO
         {
             onAimDirectionChanged?.Invoke(ctx.ReadValue<Vector2>());
         }
-
-        private void OnAimDirectionCanceled(InputAction.CallbackContext ctx)
-        {
-            onAimDirectionChanged?.Invoke(Vector2.zero);
-        }
-
 
         /// <summary>
         /// When the attack input action is performed

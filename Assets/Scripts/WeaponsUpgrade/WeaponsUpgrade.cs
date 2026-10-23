@@ -6,7 +6,8 @@ namespace JPO
     {
 
         [Header("Weapon Item Settings")]
-        [SerializeField] private int weaponIndex = 0;
+        [SerializeField] private PlayerWeapons.Weapon weapon;
+        [SerializeField] private  
 
         protected PlayerWeapons collindingUpgrade;
         
@@ -22,7 +23,7 @@ namespace JPO
         {
             base.OnCollected(collision);
             if (!collindingUpgrade) return;
-            collindingUpgrade.UpgradeWeapon(weaponIndex);
+            collindingUpgrade.UpgradeWeapon(weapon);
         }
     }
 }

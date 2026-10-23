@@ -60,14 +60,14 @@ namespace JPO
                 _waveIsActive = true;
                 _waveFiredProjectiles = 0;
                 var dirToPlayer = (_lastPlayerPosition - (Vector2)transform.position).normalized;
-                FireProjectile(dirToPlayer);
+               // FireProjectile(dirToPlayer);
             }
 
             // Fire a new projectile at the end of the timer
             if (_fireTimer.ExpiredAndWasRunning())
             {
                 var dirToPlayer = (_lastPlayerPosition - (Vector2)transform.position).normalized;
-                FireProjectile(dirToPlayer);
+                //FireProjectile(dirToPlayer);
             }
 
             // Handle end of wave cooldown timer
@@ -95,14 +95,14 @@ namespace JPO
         /// <summary>
         /// Instantiate and setup a projectile
         /// </summary>
-        public void FireProjectile(Vector2 direction)
+        /*public void FireProjectile(Vector2 direction)
         {
             var pos = transform.TransformPoint(firePositionOffset);
             var proj = ObjectPooler.Instance.InstantiatePrefab(projectilePrefab, pos, Quaternion.identity);
             proj.Initialize(gameObject, direction);
             _waveFiredProjectiles++;
 
-            /*// Play animation
+            // Play animation
             _fireFeedbackTween?.Kill();
             _fireFeedbackTween = playerSprite.transform.DOPunchScale(new Vector3(1f, -1f) * 0.5f, 0.3f)
                 .OnUpdate(() =>
@@ -114,7 +114,7 @@ namespace JPO
                     playerSprite.transform.localScale = scale;
                 })
                 // Reset the sprite scale
-                .OnComplete(() => playerSprite.transform.localScale = Vector3.one);*/
+                .OnComplete(() => playerSprite.transform.localScale = Vector3.one);
 
             // Start the timer for the next projectile or stop the wave
             if (_waveFiredProjectiles < projectilePerWave)
@@ -127,7 +127,7 @@ namespace JPO
                 _fireTimer = Timer.None;
                 _waveCooldownTimer = Timer.CreateFromSeconds(waveCooldownDuration);
             }
-        }
+        }*/
 
         /// <summary>
         /// When the player takes a damage, play hit feedback

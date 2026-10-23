@@ -4,42 +4,35 @@ namespace JPO
 {
     public class PlayerWeapons : MonoBehaviour
     {
-        public int weapon_index = 0;
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
+        public enum WeaponType
         {
-        
+            Uzi,
+            Ak47,
+            Minigun
         }
 
-        // Update is called once per frame
-        void Update()
+        [System.Serializable]
+        public struct Weapon
         {
-        
+            public WeaponType type;
+            public Sprite sprite;
+            public Vector2 localFirePoint;
+            // Stats
+            public float fireRate;
         }
 
-        public void UpgradeWeapon(int index)
+        [SerializeField] private SpriteRenderer weaponSprite;
+        [SerializeField] private Transform firePoint;
+        [SerializeField] private Weapon currentWeapon;
+
+        public void UpgradeWeapon(Weapon weapon)
         {
-            weapon_index = index;
-
-            switch (weapon_index)
-            {
-                case 1:
-                    // Débloquer arme 1
-                    print("upgrade prise : Shotgun débloqué !");
-                    break;
-                case 2:
-                    // Débloquer arme 2
-                    print("upgrade prise : AK47 débloquée !");
-                    break;
-                case 3:
-                    // Débloquer arme 3
-                    print("upgrade prise : Minigun débloqué !");
-                    break;
-                default:
-                    Debug.Log("Index d'arme inconnu : " + weapon_index);
-                    break;
-            }
-
+            currentWeapon = weapon;
+            // Update weapon sprite
+            weaponSprite.sprite = currentWeapon.sprite;
+            firePoint.localPosition = weapon.localFirePoint;
+            
+            //TODO: Update stats, local fire point etc...
         }
     }
 }

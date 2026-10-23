@@ -20,9 +20,12 @@ namespace JPO
         protected virtual void Start()
         {
             _source = GetComponent<AudioSource>();
-            _visualTween = visualT.DOLocalMoveY(visualAnimAmplitude, visualAnimDuration)
-                .SetEase(Ease.InOutSine)
-                .SetLoops(-1, LoopType.Yoyo);
+            if (visualT)
+            {
+                _visualTween = visualT.DOLocalMoveY(visualAnimAmplitude, visualAnimDuration)
+                    .SetEase(Ease.InOutSine)
+                    .SetLoops(-1, LoopType.Yoyo);
+            }
         }
 
         protected virtual void OnTriggerEnter2D(Collider2D collision)

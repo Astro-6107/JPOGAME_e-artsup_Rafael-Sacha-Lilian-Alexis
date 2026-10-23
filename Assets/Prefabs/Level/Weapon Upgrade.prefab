@@ -93,11 +93,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2aad0abfd2347b45b3431a95164e84d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JPO.WeaponsUpgrade
-  visualT: {fileID: 0}
+  visualT: {fileID: 3925265772259513027}
   visualAnimAmplitude: 0.15
   visualAnimDuration: 0.5
   delayBeforeDestroy: 0.5
-  weaponIndex: 0
+  weapon:
+    type: 0
+    sprite: {fileID: 0}
+    localFirePoint: {x: 0, y: 0}
+    fireRate: 0
 --- !u!82 &1500647319703917435
 AudioSource:
   m_ObjectHideFlags: 0

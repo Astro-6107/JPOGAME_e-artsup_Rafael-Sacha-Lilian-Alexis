@@ -248,6 +248,17 @@
                 },
                 {
                     "name": "",
+                    "id": "c9589334-1986-42a6-aff6-5729e3b60778",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard+Mouse",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "b88f2bc2-c81d-41f3-8b20-b6595139c6f3",
                     "path": "<Keyboard>/escape",
                     "interactions": "",

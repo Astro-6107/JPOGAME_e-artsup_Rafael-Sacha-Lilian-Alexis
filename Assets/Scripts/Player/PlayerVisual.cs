@@ -7,7 +7,6 @@ namespace JPO
     public class PlayerVisual : MonoBehaviour
     {
         [SerializeField] private SpriteRenderer playerSprite;
-        [SerializeField] private DamageArea sword;
         [SerializeField] private ParticleSystem moveParticles;
 
         [Header("Movement Animation")]
@@ -35,7 +34,6 @@ namespace JPO
             _healthSystem = GetComponent<HealthSystem>();
             _healthSystem.onDamageReceived.AddListener(OnDamageTaken);
             _healthSystem.onInvulnerabilityEnd.AddListener(OnInvulnerabilityEnd);
-            sword.onDamageApplied.AddListener(OnDamageApplied);
         }
 
         private void Update()
@@ -81,7 +79,6 @@ namespace JPO
             if (!_healthSystem) return;
             _healthSystem.onDamageReceived.RemoveListener(OnDamageTaken);
             _healthSystem.onInvulnerabilityEnd.RemoveListener(OnInvulnerabilityEnd);
-            sword.onDamageApplied.RemoveListener(OnDamageApplied);
         }
 
         /// <summary>
@@ -101,11 +98,6 @@ namespace JPO
             takeDamageCameraShake.GenerateImpulse();
             // Play particles
             damageParticles.Play();
-        }
-
-        private void OnDamageApplied(IDamageable _)
-        {
-            applyDamageCameraShake.GenerateImpulse();
         }
 
         /// <summary>
