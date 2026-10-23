@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JPO.HealthSystem
   startHealth: 1
-  invulnerabilityTime: 1
+  invulnerabilityTime: 0.1
   onDamageReceived:
     m_PersistentCalls:
       m_Calls: []

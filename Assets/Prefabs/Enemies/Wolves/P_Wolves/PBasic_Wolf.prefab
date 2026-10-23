@@ -99,9 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::JPO.Enemy
   projectilePrefab: {fileID: 7017048779420652532, guid: 83afac67fde99a04ebf2e4c4137f50aa, type: 3}
   firePositionOffset: {x: 0, y: 0.3}
-  projectilePerWave: 3
+  projectilePerWave: 2
   waveCooldownDuration: 2
-  delayBetweenProjectile: 0.2
+  delayBetweenProjectile: 0.5
   playerDetectionRadius: 6
   playerLayer:
     serializedVersion: 2
@@ -125,8 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d970e3108976849894436a1b58a788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JPO.HealthSystem
-  startHealth: 1
-  invulnerabilityTime: 1
+  startHealth: 3
+  invulnerabilityTime: 0.1
   onDamageReceived:
     m_PersistentCalls:
       m_Calls: []

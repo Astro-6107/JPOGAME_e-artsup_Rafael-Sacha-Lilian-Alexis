@@ -232,7 +232,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   wpDistanceThreshold: 0.1
   speed: 1
-  enemyPath: []
+  enemyPath:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   onStartMoving:
     m_PersistentCalls:
       m_Calls: []
