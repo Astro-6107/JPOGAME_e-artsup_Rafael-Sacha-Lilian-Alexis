@@ -95,7 +95,7 @@ namespace JPO
         /// <summary>
         /// Instantiate and setup a projectile
         /// </summary>
-        public void FireProjectile(Vector2 direction)
+        private void FireProjectile(Vector2 direction)
         {
             var pos = transform.TransformPoint(firePositionOffset);
             var proj = ObjectPooler.Instance.InstantiatePrefab(projectilePrefab, pos, Quaternion.identity);
