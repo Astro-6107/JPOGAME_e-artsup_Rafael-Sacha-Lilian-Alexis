@@ -37,11 +37,20 @@ MonoBehaviour:
   - m_Id: 1
     m_Sprites:
     - {fileID: -782505917, guid: 5a2161de162db354fb09bcd6a1efc6a4, type: 3}
+    - {fileID: -782505917, guid: 5a2161de162db354fb09bcd6a1efc6a4, type: 3}
+    - {fileID: -246934454, guid: 5a2161de162db354fb09bcd6a1efc6a4, type: 3}
+    - {fileID: 1481000313, guid: 5a2161de162db354fb09bcd6a1efc6a4, type: 3}
+    - {fileID: -782505917, guid: 5a2161de162db354fb09bcd6a1efc6a4, type: 3}
+    - {fileID: -782505917, guid: 5a2161de162db354fb09bcd6a1efc6a4, type: 3}
+    - {fileID: -782505917, guid: 5a2161de162db354fb09bcd6a1efc6a4, type: 3}
+    - {fileID: -782505917, guid: 5a2161de162db354fb09bcd6a1efc6a4, type: 3}
+    - {fileID: -782505917, guid: 5a2161de162db354fb09bcd6a1efc6a4, type: 3}
+    - {fileID: -782505917, guid: 5a2161de162db354fb09bcd6a1efc6a4, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
     m_PerlinScale: 0.5
-    m_Output: 0
+    m_Output: 1
     m_ColliderType: 1
     m_RandomTransform: 0
     m_Scroll: {x: 0, y: 0}
