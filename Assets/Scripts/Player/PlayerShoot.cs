@@ -8,6 +8,7 @@ namespace JPO
         [SerializeField] private TrailRenderer trail;
         [SerializeField] private float aimSmoothFactor = 5f;
         private PlayerController _controller;
+        private PlayerProjectiles _pProjectiles;
         private Camera _cam;
         private bool _isAiming;
         private Vector2 _lastAimingDirection;
@@ -26,7 +27,7 @@ namespace JPO
             _controller.onAimDirectionChanged.RemoveListener(UpdateAimingDirection);
         }
 
-        private void StartAiming()
+        /*private void StartAiming()
         {
             gunPivot.gameObject.SetActive(true);
             trail.Clear();
@@ -40,7 +41,7 @@ namespace JPO
             gunPivot.gameObject.SetActive(false);
             trail.emitting = false;
             _isAiming = false;
-        }
+        }*/
 
         private void UpdateAimingDirection(Vector2 inputValue)
         {
@@ -54,6 +55,7 @@ namespace JPO
                 var pos = _cam.ScreenToWorldPoint(inputValue);
                 pos.z = transform.position.z;
                 aimDirection = (Vector2)(pos - transform.position).normalized;
+                
             }
             else
             {
@@ -63,6 +65,12 @@ namespace JPO
             // Apply a smooth rotation to the weapon
             var angle = Vector2.SignedAngle(Vector2.up, aimDirection);
             gunPivot.localRotation = Quaternion.Lerp(gunPivot.localRotation, Quaternion.Euler(0f, 0f, angle), aimSmoothFactor * Time.deltaTime);
+        }
+
+        void FireProjectile(Vector2 direction)
+        {
+            print("direction du projectile : ");
+            print(direction);
         }
     }
 }

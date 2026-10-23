@@ -131,7 +131,7 @@ MonoBehaviour:
   onDamageApplied:
     m_PersistentCalls:
       m_Calls: []
-  projectileSprite: {fileID: 0}
+  projectileSprite: {fileID: 2973905993651696790}
   speed: 5
   lifeSpan: 5
   punchScale: {x: 0.5, y: 0.5}

@@ -41,7 +41,7 @@ namespace JPO
         {
             _healthSystem = GetComponent<HealthSystem>();
             _source = GetComponent<AudioSource>();
-            _healthSystem.onDamageReceived.AddListener(OnDamageTaken);
+            /*_healthSystem.onDamageReceived.AddListener(OnDamageTaken);*/
 
         }
 
@@ -102,7 +102,7 @@ namespace JPO
             proj.Initialize(gameObject, direction);
             _waveFiredProjectiles++;
 
-            // Play animation
+            /*// Play animation
             _fireFeedbackTween?.Kill();
             _fireFeedbackTween = playerSprite.transform.DOPunchScale(new Vector3(1f, -1f) * 0.5f, 0.3f)
                 .OnUpdate(() =>
@@ -114,7 +114,7 @@ namespace JPO
                     playerSprite.transform.localScale = scale;
                 })
                 // Reset the sprite scale
-                .OnComplete(() => playerSprite.transform.localScale = Vector3.one);
+                .OnComplete(() => playerSprite.transform.localScale = Vector3.one);*/
 
             // Start the timer for the next projectile or stop the wave
             if (_waveFiredProjectiles < projectilePerWave)
@@ -132,30 +132,7 @@ namespace JPO
         /// <summary>
         /// When the player takes a damage, play hit feedback
         /// </summary>
-        private void OnDamageTaken(int health, DamageInfo _)
-        {
-            // Stop the fire timer on death
-            if (health <= 0)
-            {
-                _fireTimer = Timer.None;
-                // Drop health item
-                if (itemDropChance > 0 && itemDropChance >= Random.value)
-                {
-                    Instantiate(healthItemPrefab, transform.position, Quaternion.identity);
-                }
-
-            }
-
-            // Setup and play the blink feedback with a DOTween sequence
-
-            playerSprite.transform.DOPunchScale(new Vector3(1f, -1f), 0.3f)
-                .OnComplete(() => playerSprite.transform.localScale = Vector3.one);
-
-
-        }
-
-
-
+   
         private void OnDrawGizmosSelected()
         {
             // Set the circles color
