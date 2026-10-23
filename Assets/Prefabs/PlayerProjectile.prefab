@@ -80,7 +80,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.25, y: 0.25}
+  m_Size: {x: 0.1, y: 0.1}
   m_EdgeRadius: 0
 --- !u!50 &5777619381653897600
 Rigidbody2D:
@@ -134,9 +134,9 @@ MonoBehaviour:
   projectileSprite: {fileID: 2973905993651696790}
   speed: 5
   lifeSpan: 5
-  punchScale: {x: 0.5, y: 0.5}
+  punchScale: {x: 0.1, y: 0.1}
   punchDuration: 0.25
-  punchVibrato: 10
+  punchVibrato: 1
 --- !u!82 &5181630447855161794
 AudioSource:
   m_ObjectHideFlags: 0

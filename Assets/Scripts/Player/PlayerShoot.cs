@@ -55,7 +55,7 @@ namespace JPO
                 var pos = _cam.ScreenToWorldPoint(inputValue);
                 pos.z = transform.position.z;
                 aimDirection = (Vector2)(pos - transform.position).normalized;
-                
+                FireProjectile(aimDirection);
             }
             else
             {
