@@ -3,6 +3,8 @@ namespace JPO
     public enum FacingDirection
     {
         Right,
-        Left
+        Left,
+        Up,
+        Down,
     }
 }

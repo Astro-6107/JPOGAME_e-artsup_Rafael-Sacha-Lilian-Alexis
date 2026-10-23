@@ -86,6 +86,14 @@ namespace JPO
                 > 0f => FacingDirection.Right,
                 _ => FacingDirection
             };
+
+            FacingDirection = _movementDirection.y switch
+            {
+                < 0f => FacingDirection.Down,
+                > 0f => FacingDirection.Up,
+                _ => FacingDirection
+            };
+
         }
     }
 }
